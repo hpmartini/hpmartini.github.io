@@ -28,7 +28,7 @@ twitter_username: _hpm_
 github_username:  hpmartini
 
 # Build settings
-theme: minima
+theme: jekyll-theme-minimal
 #theme: jekyll-theme-modernist
 plugins:
   - jekyll-feed
