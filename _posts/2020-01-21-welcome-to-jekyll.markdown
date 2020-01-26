@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: default
 title:  "Parallax directive in Angular 8"
 date:   2020-01-21 10:34:14 +0100
 categories: jekyll update

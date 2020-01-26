@@ -28,11 +28,10 @@ twitter_username: _hpm_
 github_username:  hpmartini
 
 # Build settings
-#theme: minima
-theme: minimal-mistakes-jekyll
+theme: minima
+#theme: jekyll-theme-modernist
 plugins:
   - jekyll-feed
-  - jekyll_github_sample
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,16 +1,12 @@
 ---
-layout: single
+layout: default
 title: About
 permalink: /about/
 ---
 
-This is my blog, which will soon grow and prosper. Here you can find my [personal site](https://martini-dev.de)
+This blog is made with [jekyll](https://github.com/jekyll/jekyll) and will soon grow and prosper. 
 
-
-The blog is made with jekzll:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
+Here you can find my [personal site](https://martini-dev.de)
 
 # Imprint/Impressum
 
