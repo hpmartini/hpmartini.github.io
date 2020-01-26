@@ -66,7 +66,35 @@ The CLI also registers the directive in the `app.modules.ts`, along with the def
 
 ### parallax.directive.ts [view on GitHub](https://github.com/hpmartini/angular-8-parallax-directive/blob/master/src/app/common/parallax.directive.ts)
 {% highlight TypeScript %}
-{% github_sample hpmartini/angular-8-parallax-directive/blob/master/src/app/common/parallax.directive.ts %}
+import {Directive, ElementRef, HostListener, Input, Renderer2} from '@angular/core';
+
+@Directive({
+  selector: '[appParallax]'
+})
+export class ParallaxDirective {
+  @Input('factor') set parallaxFactor(val) {
+    this.factor = val ? val : 1;
+  }
+
+  private factor: number;
+
+  constructor(
+    private elementRef: ElementRef,
+    private renderer: Renderer2
+  ) { }
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.renderer.setProperty(
+      this.elementRef.nativeElement, 
+      'style',
+      `transform: translateY(${this.getTranslation()}px)`);
+  }
+
+  private getTranslation() {
+    return window.scrollY * this.factor / 10;
+  }
+}
 {% endhighlight %}
 
 - The `factor` of how fast the element will move relative to the scroll position is passed through an `@Input` decorator. 
@@ -79,12 +107,40 @@ The CLI also registers the directive in the `app.modules.ts`, along with the def
 
 ### app.component.html [view on GitHub](https://github.com/hpmartini/angular-8-parallax-directive/blob/master/src/app/app.component.html)
 {% highlight html %}
-{% github_sample hpmartini/angular-8-parallax-directive/blob/master/src/app/app.component.html %}
+<div class="container">
+  <hello name="{{ name }}"></hello>
+  <p appParallax [factor]="11">I'm slowly inverting.</p>
+  <p appParallax [factor]="12">I'm doing it faster!</p>
+  <p appParallax [factor]="13">Me even more.</p>
+  <p appParallax [factor]="14">And I rock!</p>
+</div>
+
+<div class="container">
+  <h1 appParallax [factor]="0.3">Hello Parallax</h1>
+
+  <div id="linearScrollingText">I just scroll in linear speed</div>
+
+  <div id="slowText" appParallax [factor]="9">I'm going faaaa... not.</div>
+</div>
 {% endhighlight %}
 
 ### app.component.css [view on GitHub](https://github.com/hpmartini/angular-8-parallax-directive/blob/master/src/app/app.component.css)
 {% highlight css %}
-{% github_sample hpmartini/angular-8-parallax-directive/blob/master/src/app/app.component.css 4 19 %}
+.container {
+  height: 100vh;
+}
+
+#slowText {
+  position: absolute;
+  bottom: -30px;
+  right: 10px;
+}
+
+#linearScrollingText {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
 {% endhighlight %}
 
 Nothing special here, the `container` is set to `100vh` so we can scoll at all. The same goes for the positioning of the two strings at the bottom.
