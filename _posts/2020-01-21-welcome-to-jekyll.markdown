@@ -4,7 +4,7 @@ title:  "Parallax directive in Angular 8"
 date:   2020-01-21 10:34:14 +0100
 categories: jekyll update
 ---
-Parallax effects on Single Page Applications are definitely an old hat. However there's always a first time to use something. After testing a lot out, which didn't work like I needed it, I came up with a solution, based on a [blog entry](parallax-blog-entry) by [Gaurav Foujdar](the-guy). But with a different way to move the elements.
+Parallax effects on Single Page Applications are definitely an old hat. However there's always a first time to use something. After testing a lot out, which didn't work like I needed it, I came up with a solution, based on a [blog entry](https://medium.com/fove/angular-parallax-d1c2de9f07a6) by [Gaurav Foujdar](https://medium.com/@gauravkumarfoujdar). But with a different way to move the elements.
 
 # TLDR
 Implement the parallax effect with an Angular directive, which works on the translate-y property of CSS3.
@@ -149,6 +149,3 @@ That's it.
 
 Just to remember, you can watch the [demo on Stackblitz](https://angular-8-parallax-directive.stackblitz.io/) or [check out from GitHub](https://github.com/hpmartini/angular-8-parallax-directive).
 
-
-[parallax-blog-entry]: https://medium.com/fove/angular-parallax-d1c2de9f07a6
-[the-guy]: https://medium.com/@gauravkumarfoujdar
