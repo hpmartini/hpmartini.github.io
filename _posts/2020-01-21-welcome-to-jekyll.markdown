@@ -9,7 +9,7 @@ Parallax effects on Single Page Applications are definitely an old hat. However 
 # TLDR
 Implement the parallax effect with an Angular directive, which works on the translate-y property of CSS3.
 
-See the [demo on Stackblitz](https://angular-8-parallax-directive.stackblitz.io/) or [check out from GitHub](https://github.com/hpmartini/angular-8-parallax-directive).
+See the [demo on Stackblitz](https://stackblitz.com/edit/angular-8-parallax-directive) or [check out from GitHub](https://github.com/hpmartini/angular-8-parallax-directive).
 
 # The parallax effect...
 ... not explained. I won't bother you with boring explainations about that effect, which you can read for yourself on [wikipedia](https://en.wikipedia.org/wiki/Parallax) if you feel the urge.
