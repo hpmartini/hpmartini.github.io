@@ -6,7 +6,7 @@ permalink: /about/
 
 This blog is made with [jekyll](https://github.com/jekyll/jekyll) and will soon grow and prosper. 
 
-Here you can find my [personal site](https://martini-dev.de)
+Here you can find my [personal site](https://hpm.dev)
 
 # Imprint/Impressum
 
